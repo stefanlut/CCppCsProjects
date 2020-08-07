@@ -7,8 +7,9 @@ float avg,
 runsum = 0,
 in;
 int i=0;
+int * pIn = &in;
 printf("Enter the first quiz grade:  \n");
-while(scanf("%f",&in)==1)
+while(scanf("%f",pIn)==1)
 {
 	runsum+=in;
 	i++;

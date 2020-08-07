@@ -5,13 +5,14 @@ int main()
 
 {
 int choice;
+int * pChoice = &choice;
 printf("Main Menu \n\n");
 printf("1.  Hello\n");
 printf("2.  Hi\n");
 printf("3.  Hola\n");
 
 printf("Please enter a choice: \n\n");
-scanf("%d",&choice);
+scanf("%d",pChoice);
 
 switch (choice)
 {
@@ -23,6 +24,9 @@ printf("Hi\n");
 break;
 case 3:
 printf("Hola\n");
+break;
+default:
+printf("not acceptable\n");
 break;
 }
 

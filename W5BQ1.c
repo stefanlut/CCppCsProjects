@@ -9,6 +9,7 @@ typedef struct linked_list
    struct linked_list *next;
 }   element;
 int a;
+int* pA;
 typedef element * elementptr;
   elementptr first = NULL,
             last = NULL,
@@ -37,7 +38,7 @@ int main()
    last -> next = (elementptr) malloc(sizeof(element));
 last = last -> next;
 printf("Enter a number: ");
-scanf("%d\n",&a);
+scanf("%d\n",pA);
 fflush(stdin);
 last -> next = (elementptr) malloc(sizeof(element));
    last = last -> next;

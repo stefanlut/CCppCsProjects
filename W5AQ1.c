@@ -1,7 +1,8 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 void changeit(char *);
-void changeittoo(char *);
+
+void changeit2(char **);
 
 int main()
 {
@@ -32,7 +33,7 @@ int main()
     printf("symbol is %c\n", symbol);
 
     changeit(cptr);
-    changeit(&cptr);
+    changeit2(&cptr);
     printf("*cptr is %c\n", *cptr);
     free(cptr);
     return 0;
@@ -44,9 +45,9 @@ void changeit(char *fncptr)
     fncptr = (char *) malloc(sizeof(char));
     *fncptr = '3';
 }
-void changeittoo(char **fncptr)
+void changeit2(char **fncptr)
 {
-printf("The char is %c\n", *fncptr);
+printf("The char is %s\n", *fncptr);
     fncptr = (char *) malloc(sizeof(char));
     *fncptr = '3';
     

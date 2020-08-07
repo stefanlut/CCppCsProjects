@@ -6,9 +6,8 @@
 #define t 20
 int main()
 {
-float T,
-A,
-Tf;
+float T,A,Tf;
+
 printf("Enter the initial and surrounding temperatures: ");
 scanf("%f %f",&T,&A);
 
