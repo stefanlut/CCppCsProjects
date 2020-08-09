@@ -9,7 +9,7 @@ typedef struct linked_list
    struct linked_list *next;
 }   element;
 int a;
-int* pA;
+int* pA = &a;
 typedef element * elementptr;
   elementptr first = NULL,
             last = NULL,
@@ -18,11 +18,9 @@ typedef element * elementptr;
 
 int main()
 {
-
-
    /* Create a linked list with one element            */
    /* NOTE: the first element is always a special case */
-
+   
    first = (elementptr) malloc(sizeof(element));
    last = first;
    last -> data = 5;
@@ -36,17 +34,17 @@ int main()
    last -> next = NULL;
 
    last -> next = (elementptr) malloc(sizeof(element));
-last = last -> next;
-printf("Enter a number: ");
-scanf("%d\n",pA);
-fflush(stdin);
-last -> next = (elementptr) malloc(sizeof(element));
+   last = last -> next;
+   printf("Enter a number: ");
+   scanf("%d\n",pA);
+   fflush(stdin); 
+   last -> next = (elementptr) malloc(sizeof(element));
    last = last -> next;
    last -> data = a;
    last -> next = NULL;
    printf("Number added is %d \n",last -> data);
 
-trav_and_print();
+   trav_and_print();
    free(first);
    free(last);
 
