@@ -32,12 +32,12 @@ int main()
    last = last -> next;
    last -> data = 12;
    last -> next = NULL;
+   printf("%d \n",last->data);
 
    last -> next = (elementptr) malloc(sizeof(element));
    last = last -> next;
    printf("Enter a number: ");
-   scanf("%d\n",pA);
-   fflush(stdin); 
+   scanf("%d",pA);
    last -> next = (elementptr) malloc(sizeof(element));
    last = last -> next;
    last -> data = a;
@@ -47,6 +47,7 @@ int main()
    trav_and_print();
    free(first);
    free(last);
+   free(last -> next);
 
    return 0;
 }
