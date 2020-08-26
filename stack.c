@@ -36,8 +36,12 @@ int isEmpty(struct Stack* stack){
 
 void push(struct Stack* stack, int item) 
 { 
-    if (isFull(stack)) 
-        return; 
+    if (isFull(stack)) {
+
+        printf("\nStack Overflow!\n");
+        return;
+    }
+         
     stack->array[++stack->top] = item; 
     printf("%d pushed to stack\n", item); 
 } 
@@ -46,7 +50,10 @@ void push(struct Stack* stack, int item)
 int pop(struct Stack* stack) 
 { 
     if (isEmpty(stack)) 
-        return INT_MIN; 
+        {
+            printf("\nStack Underflow!\n");
+            return INT_MIN; 
+        }
     return stack->array[stack->top--]; 
 } 
   
@@ -60,12 +67,12 @@ int peek(struct Stack* stack)
 
 int main(){
 
-    struct Stack* stack = createStack(100);
+    struct Stack* stack = createStack(2);
 
     push(stack, 10); 
     push(stack, 20); 
     push(stack, 30); 
-  
+    
     printf("%d popped from stack\n", pop(stack)); 
   
     return 0;
