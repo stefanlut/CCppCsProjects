@@ -1,7 +1,5 @@
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <limits.h>
 
 struct Stack{
@@ -22,7 +20,7 @@ struct Stack* createStack(unsigned capacity){
 
 int isFull(struct Stack* stack)
 {
-
+    
     return stack->top == stack->capacity - 1;
 
 
