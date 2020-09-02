@@ -13,7 +13,7 @@ struct Stack* createStack(unsigned capacity){
 
     struct Stack* stack = (struct Stack*)malloc(sizeof(struct Stack));
     stack->capacity = capacity;
-    stack->top = -1;
+    stack->top = -1; // For initialization purposes
     stack->array = (int*)malloc(stack->capacity * sizeof(int));
     return stack;
 };

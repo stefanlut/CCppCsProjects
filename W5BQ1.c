@@ -6,8 +6,8 @@ void trav_and_print(void);
 typedef struct linked_list
 {
    int data;
-   struct linked_list *next;
-}   element;
+   struct linked_list * next;
+}element;
 int a;
 int* pA = &a;
 typedef element * elementptr;
@@ -47,7 +47,8 @@ int main()
    trav_and_print();
    free(first);
    free(last);
-   free(last -> next);
+   free(current);
+
 
    return 0;
 }
