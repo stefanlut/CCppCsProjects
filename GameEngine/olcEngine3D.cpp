@@ -1,6 +1,6 @@
 #include "olcConsoleGameEngineSDL.h"
 using namespace std;
-
+// Compile as follows g++ olcEngine3D.cpp -DUNICODE -I/usr/include/SDL2 -lSDL2 -lpthread -std=c++11
 
 struct vec3d
 {
