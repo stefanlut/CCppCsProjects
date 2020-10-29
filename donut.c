@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 int k;
-double sin() ,cos();
+double sin() , cos();
 int main(){
     float A=0, B=0, i, j, z[1760];
     char b[1760];
